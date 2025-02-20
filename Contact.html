@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Overlay for fade effect when sidebar opens -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Fixed Top Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+           <a href="index.html"> <img src="Logo.png" alt="Logo"></a>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <span class="material-icons">menu</span>
+        </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Me</a></li>
+            <li><a href="#Studio">Studio</a>
+                <ul>
+                    <li><a href="Design.html">Design</a></li>
+                    <li><a href="Photography.html">Photography</a></li>
+                    <li><a href="Fineart.html">Fine Art</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    
+    <div class="contact-title">
+     <img src="title/Capture%20d%E2%80%99%C3%A9cran%202025-02-19%20%C3%A0%2022.55.35.png">
+    </div>
+    
+   <section class="contact">
+    <div>
+        <p>Feel free to send me a message if you have any questions. I'd love to hear from you!</p>
+        
+        <form id="contact-form">
+        <label for="user_name">Name</label>
+        <input type="text"
+               id="user_name"
+               name="user_name"
+               placehorler="Your name…"
+               required
+               />
+               
+        <label for="user_email">Email</label>
+        <input type="email"
+               id="user_email"
+               name="user_email"
+               placeholder="example@gmail.com"
+               required
+               />
+            
+            <label for="message">Message</label>
+            <textarea
+                      name="message"
+                      id="message"
+                      placeholder="Your message..."
+                      required>
+            </textarea>
+            
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+       </div>
+    </section>
+    
+    
+    
+    <!-- EmailJS Script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script>
+    //Contact Form
+
+    const contactForm = document.querySelector("#contact-form");
+    const submitBtn = document.querySelector(".submit-btn");
+    const nameInput = document.querySelector("#user_name");
+    const emailInput = document.querySelector("#user_email");
+    const messageInput = document.querySelector("#message");
+
+    const publicKey = "oHri_YYTKtx59fPNO";
+    const serviceID = "service_jas0b77";
+    const templateID = "template_i186ulb";
+
+    emailjs.init(publicKey);
+
+    contactForm.addEventListener("submit", e => {
+        e.preventDefault();
+        submitBtn.innerText = "Just a moment...";
+        
+        const inputFields = {
+            name: nameInput.value,
+            email: emailInput.value,
+            message: messageInput.value,
+        }
+        
+        emailjs.send(serviceID, templateID, inputFields)
+            .then(() => {
+                submitBtn.innerText = "Message Sent Successfully";
+                nameInput.value = "";
+                emailInput.value = "";
+                messageInput.value = "";
+            }, (error) => {
+                console.log(error);
+                submitBtn.innerText = "Something went wrong";
+            });
+    });
+    </script>
+
+    <!-- Footer with Behance and LinkedIn buttons -->
+    <div class="Footer">
+        
+            <a class="social-icon" href="https://www.behance.net/MayStudio21" target="_blank">
+                <ion-icon name="logo-behance"></ion-icon>
+            </a>
+        
+            <a class="social-icon" href="https://www.linkedin.com/in/mathilde-debuire-6510b8264/" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+
+            </a>
+        
+        <p>2025 Debuire Mathilde | Designed</p>
+        
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="script.js"></script>
+
+</body>
+</html>
