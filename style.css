@@ -1,0 +1,1416 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Geist:wght@100..900&display=swap');
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overlay for fade effect when the sidebar is visible */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Fixed Top Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Logo in the navbar */
+.navbar .logo img {
+    width: 75px;
+}
+
+/* Menu Icon (on the right) */
+.navbar .menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    color: #001191;
+}
+
+/* Side Menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background-color: #001191;
+    transition: right 0.3s ease;
+    z-index: 1001;
+    padding-top: 60px;
+    border-radius: 10px 0 0 10px; /* Rounded corners */
+}
+
+/* Side menu visible (when triggered) */
+.side-menu.open {
+    right: 0;
+}
+
+/* Overlay - background to darken the area when side menu opens */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Overlay visible when side menu opens */
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+
+/* Menu Links in the Side Menu */
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 10px;
+    margin-left: 10%;
+    text-align: left;
+}
+
+.side-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Cormorant SC';
+    font-size: 20px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+    color: #9F7728;
+}
+
+/* Sub-Menu under "Work" */
+.side-menu ul ul {
+    margin-top: 9px;
+    padding-left: 20px;
+}
+
+.side-menu ul ul li a:hover {
+    color: #9F7728;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+}
+
+.header .header-image {
+    width: 100%; 
+    height: auto;
+    margin-top: 8%;
+}
+
+.header .header-text {
+    position: absolute;
+    bottom: 20px;
+    margin-top: 60%; 
+    text-align: center;
+    color: #9F7728;
+}
+
+.header h1 {
+    font-size: 20px;
+    margin: 15px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+}
+
+.header h2 {
+    font-size: 17px;
+    font-family: 'Geist', sans-serif;
+    color: #9F7728;
+    font-weight: 100;
+}
+
+
+/* Intro Section */
+.Intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#001191;  
+    width: 100%;
+    height: 720px;
+    padding: 0 10%;
+}
+
+.Intro .Intro-image {
+    width: 30%; 
+    height: auto;
+    margin-top: 17%;
+    margin-left: 6%;
+    margin-right: 10%;
+}
+
+.Intro .Intro-text {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 14%;
+}
+
+.Intro h1 {
+    font-size: 40px;
+    margin: 15px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 100;
+}
+
+.Intro h2 {
+    font-size: 40px;
+    font-family: 'Cormorant SC', sans-serif;
+    padding-bottom: 4%;
+    font-weight: 400;
+}
+
+.Intro p {
+    font-size: 17px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 100;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 6%;
+    background-color: #9F7728;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7F5C1B;
+}
+
+
+/* Studio Section */
+.Studio {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 20px 10%;
+    text-align: center;
+}
+
+/* Title Image */
+.Studio .studio-title {
+    width: 34%;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 8%;
+}
+
+.container{
+    margin-bottom: 12%;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.work{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15%;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1),#000000);
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 15px;
+    transition: height 0.8s;
+}
+
+.layer h3{
+    font-family: 'Cormorant SC';
+    color: #ffffff;
+    font-size: 30px;
+    padding-bottom: 5%;
+}
+
+.layer p{
+    font-family: 'Geist';
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.work:hover {
+    transform: scale(1.05);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.button {
+    display: block;
+    padding: 10px 20px;
+    margin-top: 3%;
+    background-color: #9F7728;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button:hover {
+    background-color: #7F5C1B;
+}
+
+
+/* Footer Section */
+.Footer {
+    background-color: #D9D9D9;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.Footer h2 {
+    font-family: 'Cormorant SC';
+    color: #0A0751;
+    padding: 7%;
+    font-size: 40px;
+}
+
+.Footer p {
+    font-family: 'Geist';
+    color: #0A0751;
+    font-size: 15px;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+/* Bio Section */
+.bio-section {
+    background-color: #003396;
+    color: white;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.bio-section img {
+    width: 55%;
+    height: auto;
+    padding-bottom: 3%;
+}
+
+.bio-section p {
+    font-size: 17px;
+    line-height: 1.6;
+    font-family: 'Geist';
+    font-weight: 100;
+}
+
+/* Photography Section with Masonry Grid */
+.Stu {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.Stu .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    grid-auto-rows: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Stu .image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1;
+}
+
+.Stu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(100%);
+}
+
+/* Hover effect for image items */
+.Stu .image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.Stu .image-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* General styles for the lightbox */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+.lightbox-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Lightbox content */
+.lightbox-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Close button */
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    padding-right: 2%;
+    padding-top: 2%;
+    color: #003396;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Image container (large image) */
+.lightbox-image-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-right: 10   zé%;
+    overflow: hidden;
+}
+
+/* Ensuring the image keeps its aspect ratio */
+.lightbox-image {
+    max-width: 98%;
+    max-height: 98%;
+    padding-bottom: 10%;
+    object-fit: contain;
+}
+
+/* Title container for both main and smaller titles */
+.lightbox-title-container {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    margin-bottom: 3%;
+    color: #003396;
+    text-align: right;
+    font-family: 'Cormorant SC', serif;
+}
+
+.lightbox-image-title {
+    font-size: 35px;
+    font-family: 'Cormorant SC';
+    color: #003396;
+    padding-bottom: 1%;
+}
+
+.lightbox-image-subtitle {
+    font-size: 15px;
+    font-family: 'Geist';
+    font-weight: 100;
+    color: #D1B25B;
+}
+
+/* Navigation arrows */
+button.lightbox-prev,
+button.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #003396;
+    font-size: 30px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.lightbox-prev {
+    left: 10px;
+}
+
+button.lightbox-next {
+    right: 10px;
+}
+
+/* Thumbnails at the bottom */
+.lightbox-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    padding: 1%;
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.thumbnail-container img {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.thumbnail-container img:hover {
+    border-color: #003396;
+}
+
+
+
+/* Fine Art Portfolio Styles */
+.fine-art-portfolio {
+    text-align: center;
+}
+
+.fine-art-portfolio .banner {
+    background-color: #003396;
+    height: auto;
+}
+
+.fine-art-portfolio .banner img {
+    width: 35%;
+    height: auto;
+    padding-top: 6%;
+    padding-bottom: 1%;
+    margin-top: 5%;
+}
+
+.category-tabs {
+    padding-bottom: 4%;
+}
+
+.category-btn {
+    font-size: 16px;
+    font-family: 'Geist';
+    font-weight: 100;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #003396;
+    color: #ffffff;
+    border: none;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.category-btn:hover {
+    color: darkgoldenrod;
+    font-weight: 300;
+}
+
+/* Print intro */
+.Printing-intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 10%;
+    padding-top: 4%;
+}
+
+.Printing-intro img {
+    width: 30%;
+    height: auto;
+    margin-left: 13%;
+    margin-right: 4%;
+}
+
+.Printing-intro .text-content1 {
+    text-align: left;
+    padding-left: 10%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.Printing-intro h1 {
+    font-family: 'Cormorant SC';
+    color: #003396;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 4%;
+    margin-top: 15%;
+}
+
+.Printing-intro p {
+    font-family: 'Geist';
+    text-align: center;
+    font-weight: 100;
+    color: #003396;
+    font-size: 16px;
+}
+
+/* Button styling */
+.Printing-intro .btn {
+    display: inline-block;
+    margin-left: 40%;
+    padding: 10px 20px;
+    margin-top: 6%;
+    background-color: #9F7728;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Printing-intro .btn:hover {
+    background-color: #7F5C1B;
+    transform: scale(1.1);
+}
+
+.Printing-intro .btn:active {
+    transform: scale(1);
+}
+
+
+/* Slideshow print */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container for the image and text */
+.image-text-container {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+
+.image-text-container img{
+    margin-left: 60%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%; 
+  object-fit: cover; 
+}
+
+/* Position the "prev" button vertically on the left of the image */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: #003396;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 10;
+  margin-top: -22px;
+}
+
+.prev {
+  left: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: darkgoldenrod;
+}
+
+/* Caption text */
+.bigtitle {
+  color: #003396;
+  font-size: 29px;
+  padding-bottom: 15%;
+  font-family: 'Cormorant SC';
+  position: absolute;
+  padding-left: 11%;
+  text-align: left;
+}
+
+.description{
+  color: #003396;
+  font-size: 16px;
+  padding-bottom: 5%;
+  font-family: 'Geist';
+  font-weight: 100;
+  position: absolute;
+  padding-left: 11%;
+  text-align: left;
+}
+
+/* Number text */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.close-btn {
+  position: absolute;
+    margin-top: 1%;
+  top: 20px;
+  left: 20px;
+  color: #003396;
+  font-size: 12px !important;
+  font-family: 'Geist';
+  font-weight: 100;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: darkgoldenrod;
+}
+
+
+
+/* Category Content */
+.category-content {
+    display: none;
+}
+
+.category-content.active {
+    display: block;
+}
+
+/* Centering the page */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* Design section */
+.title-design {
+    background-color: #003396;
+    color: white;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.title-design img {
+    width: 30%;
+    height: auto;
+}
+
+/* Flexbox layout for design projects */
+.design-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 40px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Design Card Styling */
+.design-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image Styling */
+.design-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.design-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Title Styling */
+.project-title {
+    font-family: 'Cormorant SC';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    color: transparent;
+    padding: 3%;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.design-card:hover .project-title {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    color: #ffffff;
+    opacity: 1;
+}
+
+
+.png1 {
+    margin-bottom: 8%;
+    width: 100%;
+    height: auto;
+}
+
+.png1 img{
+    width: 100%;
+    height: auto;
+}
+
+.footer h3{
+    font-family: 'Cormorant SC';
+    font-size: 30px;
+    color: #0A0751;
+    padding-bottom: 5%;
+}
+
+/* Style the close button in the navbar */
+.close-btn1 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #0A099A;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+}
+
+.close-btn1 a {
+    color: #0A099A;
+    text-decoration: none;
+}
+
+.close-btn1 a:hover {
+    color: #7F5C1B;
+}
+
+
+/*Contact Page*/
+.contact-title{
+    padding-top: 5%;
+    background-color: #003396;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-title img{
+    padding: 6%;
+    width: 60%;
+    height: auto;
+}
+
+.contact{
+    margin: 7%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.contact > div {
+    background: #ffffff;
+    padding: 2.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 2em rgba(0,0,0,0.3);
+}
+
+.contact p {
+    max-width: 400px;
+    font-size: 20px;
+    font-family: 'Cormorant SC';
+    text-align: center;
+    font-weight: 100;
+    color: #003396;
+    margin: 1em 0 2em 0;
+}
+
+.contact form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea{
+    border: none;
+    padding: 0.8em;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0.5em 0 1em 0;
+    font-size: 14px;
+    font-family: 'Geist';
+    font-weight: 100;
+    color: #003396;
+    background: #eeeeee;
+}
+
+.contact label{
+    color: #003396;
+    font-family: 'Geist';
+    font-weight: 100;
+}
+
+.contact textarea{
+    resize: none;
+    height: 8em;
+    font-family: 'Geist';
+    font-weight: 100;
+}
+
+.contact input:focus, .contact textarea:focus{
+    outline: none;
+}
+
+
+.contact input:placeholder, .contact textarea:placeholder{
+    color: #BABABA;
+}
+
+.contact button{
+    border: none;
+    font-family: 'Geist';
+    font-weight: 100;
+    cursor: pointer;
+    width: 80%;
+    padding: 2%;
+    margin-top: 5%;
+    background-color: #9F7728;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;;
+    transition: 0.3s;
+}
+
+.contact button:hover{
+    background-color: #7F5C1B;
+}
+
+@media screen and (max-width: 500px) {
+    .contact{
+        font-size: 14px;
+    }
+}
+
+
+/*footer social media*/
+
+.social-icon{
+    color: #003396;
+    transition: color 0.3s;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-icon:hover{
+    color: #0A0751;
+}
+
+ion-icon {
+    padding-top: 5%;
+    font-size: 55px;
+}
+
+
+/*contact - specialization*/
+/*history*/
+.first-welcome {
+    display: flex;
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-bottom: 9%;
+    background-color: #003396;
+    align-items: center;
+}
+
+.first-welcome img {
+    width: 30%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.history {
+    padding-left: 11%;
+    width: 60%;
+}
+
+.history h1 {
+    font-size: 45px;
+    margin-bottom: 5%;
+    color: #9F7728;
+    font-family: 'Cormorant SC';
+}
+
+.history p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: 'Geist';
+    font-weight: 100;
+}
+
+.history .brief-history {
+    margin-top: 20px;
+}
+
+
+/*specialisation*/
+.h2specialization {
+    font-family: 'Cormorant SC';
+    font-size: 50px;
+    margin-top: 7%;
+    text-align: center;
+    color: #003396;
+}
+
+.specializations {
+    display: flex;
+    gap: 4%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 4%;
+    margin-bottom: 7%;
+    text-align: center;
+}
+
+.specialization-item {
+    position: relative;
+    width: 260px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.specialization-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    opacity: 1;
+    transition: background 0.4s ease, opacity 0.4s ease;
+}
+
+.text-overlay strong {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.text-overlay p {
+    font-family: 'Geist';
+    font-weight: 100;
+    font-size: 14px;
+    text-align: center;
+}
+
+.specialization-item:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.specialization-item:hover .text-overlay {
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+}
+
+/* Section Styling */
+.approach {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1000px;
+    text-align: center;
+    background-color: transparent;
+}
+
+/* Heading Styling */
+.approach h2 {
+    font-family: 'Cormorant SC', serif;
+    font-size: 36px;
+    color: #003396;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Blockquote Styling */
+.approach blockquote {
+    font-family: 'Geist';
+    font-weight: 100;
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
+    padding: 30px 40px;
+    border-left: 6px solid #003396;
+    background-color: transparent;
+    line-height: 1.7;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Quotation Marks Styling */
+.approach blockquote::before {
+    content: '"';
+    font-family: 'Cormorant SC', serif;
+    font-size: 60px;
+    color: #003396;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+/* Hover Effect for the Blockquote */
+.approach blockquote:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .approach {
+        padding: 30px 20px;
+    }
+
+    .approach h2 {
+        font-size: 28px;
+    }
+
+    .approach blockquote {
+        font-size: 16px;
+        padding: 20px 25px;
+    }
+}
+
+
+/* Experience Section */
+.experience {
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 1000px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    border-left: 6px solid #003396;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience h2 {
+    font-family: 'Cormorant SC', serif;
+    font-size: 36px;
+    color: #003396;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Content Styling */
+.experience-content {
+    font-family: 'Geist', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Paragraph Styling */
+.experience-content p {
+    margin: 20px 0;
+    padding: 0 20px;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .experience h2 {
+        font-size: 28px;
+    }
+
+    .experience-content p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+
+/*work with me section*/
+.work-with-me {
+    background-color: #003396;
+    color: #ffffff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 300px;
+    flex-wrap: wrap;
+}
+
+/* Content Container */
+.content-container {
+    max-width: 640px;
+    padding: 15px 60px;
+    text-align: left;
+}
+
+.content-container h2 {
+    font-family: 'Cormorant SC';
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.content-container p {
+    font-family: 'Geist';
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* CTA Container */
+.cta-container {
+    max-width: 520px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.cta-container h2 {
+    font-family: 'Cormorant SC';
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    color: #ffffff;
+}
+
+.cta-container p {
+    font-family: 'Geist', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.cta-container .email{
+    font-weight: 400;
+}
+
+/* Call to Action Button Styling */
+.cta-button {
+    background-color: #9F7728;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-family: 'Geist';
+    font-size: 14px;
+    font-weight: 200;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #7F5C1B
+;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-with-me {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-container, .cta-container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+}
+
+
+
