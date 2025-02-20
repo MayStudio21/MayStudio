@@ -1,0 +1,161 @@
+<html>
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Overlay for fade effect when sidebar opens -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Fixed Top Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"> <img src="Logo.png" alt="Logo"></a>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <span class="material-icons">menu</span>
+        </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Me</a></li>
+            <li><a href="index.html#studioanchor">Studio</a>
+                <ul>
+                    <li><a href="Design.html">Design</a></li>
+                    <li><a href="Photography.html">Photography</a></li>
+                    <li><a href="Fineart.html">Fine Art</a></li>
+                </ul>
+            </li>
+            <li><a href="Contact.html">Contact</a></li>
+
+        </ul>
+    </div>
+    
+    <div class="bio-section">
+        <img src="title/phototitle.png">
+        <p>I love to capture the beauty of the world through my lens.</p>
+    </div>
+
+   
+<!-- Photography Section with Masonry Grid -->
+    <div class="Stu">
+    <div class="images">
+        <div class="image-item">
+            <img src="images/build.jpg" alt="Image 1" class="lightbox-trigger" data-title="Above" data-subtitle="Albi, France">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/wex.jpg" alt="Image 1" class="lightbox-trigger" data-title="Wexford Quay" data-subtitle="Wexford Quay, Ireland">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/rock.jpg" alt="Image 1" class="lightbox-trigger" data-title="A Glimpse" data-subtitle="Cap d'Antibes, France">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/leaves.jpg" alt="Image 1" class="lightbox-trigger" data-title="Nature's veins" data-subtitle="Paris, France">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/wheel.jpg" alt="Image 1" class="lightbox-trigger" data-title="Sun ride" data-subtitle="Antibes, France">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/sunset.jpg" alt="Image 1" class="lightbox-trigger" data-title="Sunset High" data-subtitle="Nice, France">
+        </div>
+        <div class="image-item">
+            <img src="images/snow.jpg" alt="Image 2" class="lightbox-trigger" data-title="Whater echo" data-subtitle="Courchevel, France">
+        </div>
+
+        <div class="image-item">
+            <img src="images/ray.jpg" alt="Image 2" class="lightbox-trigger" data-title="Dream Away" data-subtitle="Enniscorthy, Ireland">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/river.jpg" alt="Image 2" class="lightbox-trigger" data-title="Life detail" data-subtitle="Wexford, Ireland">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/moon.jpg" alt="Image 2" class="lightbox-trigger" data-title="Looking for the moon" data-subtitle="Rosselare, Ireland">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/Berlin.jpg" alt="Image 2" class="lightbox-trigger" data-title="Berlin" data-subtitle="Berlin, Germany">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/poll.jpg" alt="Image 2" class="lightbox-trigger" data-title="Perspective" data-subtitle="Berlin, Germany">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/bird.jpg" alt="Image 2" class="lightbox-trigger" data-title="Wings of Hope" data-subtitle="Antibes, France">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/boat.jpg" alt="Image 2" class="lightbox-trigger" data-title="Vauban" data-subtitle="Vauban, France">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/jelly.jpg" alt="Image 2" class="lightbox-trigger" data-title="Seamphony" data-subtitle="Monaco">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/fly.jpg" alt="Image 2" class="lightbox-trigger" data-title="Still motion" data-subtitle="Nice, France">
+        </div>
+        
+        <div class="image-item">
+            <img src="images/mirror.jpg" alt="Image 1" class="lightbox-trigger" data-title="Shattered" data-subtitle="Berlin, Germany">
+        </div>
+        
+        
+        <div class="image-item">
+            <img src="images/flower.jpg" alt="Image 2" class="lightbox-trigger" data-title="Pure white" data-subtitle="Wexford, Ireland">
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay">
+    <div class="lightbox-content">
+        <button class="lightbox-close">X</button>
+
+        <!-- Carousel for the image -->
+        <button class="lightbox-prev">&#10094;</button>
+        <div class="lightbox-image-container">
+            <img class="lightbox-image" src="" alt="">
+        </div>
+        <button class="lightbox-next">&#10095;</button>
+
+        <!-- Title container (both titles) -->
+        <div class="lightbox-title-container">
+            <h2 class="lightbox-image-title"></h2>
+            <p class="lightbox-image-subtitle"></p> <!-- Smaller title -->
+        </div>
+    </div>
+
+    <!-- Thumbnails at the bottom -->
+    <div class="lightbox-thumbnails">
+        <div class="thumbnail-container">
+            <!-- Thumbnails will be inserted dynamically here -->
+        </div>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+    
+    
+    
+    <div class="Footer">    
+    <p>2025 Debuire Mathilde | Designed</p>
+    
+    </div>
+
+
+</body>
+</html>
