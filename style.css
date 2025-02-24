@@ -21,29 +21,18 @@
     transition: opacity 0.3s ease, visibility 0s 0.3s;
 }
 
-/* Fixed Top Navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 3%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
-}
-
-.navbar .logo img {
-    width: 75px;
-}
-
-.navbar .menu-icon {
-    font-size: 25px;
-    cursor: pointer;
-    color: #001191;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .home-nav {
@@ -61,17 +50,35 @@
     color: #9F7728;
 }
 
+.navbar .logo {
+    position: absolute;
+    left: 65%;
+    transform: translateX(-50%);
+}
+
+.navbar .logo img {
+    width: 15%;
+}
+
+.navbar .menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    color: #001aa9;
+    position: absolute;
+    right: 2%;
+} 
+
 .side-menu {
     position: fixed;
     top: 0;
-    right: -300px; /* Initially hidden */
+    right: -300px;
     width: 300px;
     height: 100%;
     background-color: #001191;
     transition: right 0.3s ease;
     z-index: 1001;
     padding-top: 60px;
-    border-radius: 10px 0 0 10px; /* Rounded corners */
+    border-radius: 10px 0 0 10px;
 }
 
 .side-menu.open {
@@ -84,14 +91,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0s 0.3s;
 }
 
-/* Overlay visible when side menu opens */
+/* Overlay */
 .overlay.open {
     opacity: 1;
     visibility: visible;
