@@ -1465,6 +1465,7 @@ ion-icon {
     
     .Intro .Intro-image {
         width: 60%; 
+        height: auto;
         padding-bottom: 5%;
     }
     
