@@ -43,7 +43,7 @@
 
 .navbar .home-nav a {
     text-decoration: none;
-    color: #001aa9;
+    color: #062692;
 }
 
 .navbar .home-nav a:hover {
@@ -74,7 +74,7 @@
     right: -300px;
     width: 300px;
     height: 100%;
-    background-color: #001191;
+    background-color: #062692;
     transition: right 0.3s ease;
     z-index: 1001;
     padding-top: 60px;
@@ -187,7 +187,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#001191;  
+    background-color:#062692;  
     width: 100%;
     height: 720px;
     padding: 0 10%;
@@ -210,20 +210,20 @@
 .Intro h1 {
     font-size: 40px;
     margin: 15px;
-    font-family: 'Geist', sans-serif;
+    font-family: 'Geist';
     font-weight: 100;
 }
 
 .Intro h2 {
     font-size: 40px;
-    font-family: 'Cormorant SC', sans-serif;
+    font-family: 'Cormorant SC';
     padding-bottom: 4%;
     font-weight: 400;
 }
 
 .Intro p {
     font-size: 17px;
-    font-family: 'Geist', sans-serif;
+    font-family: 'Geist';
     font-weight: 100;
 }
 
@@ -1079,7 +1079,7 @@ body {
 
 ion-icon {
     padding-top: 5%;
-    font-size: 55px;
+    font-size: 40px;
 }
 
 
@@ -1429,5 +1429,169 @@ ion-icon {
     }
 }
 
+@media only screen and (min-width: 2240px){
+    .header{
+        margin-top: 15%;
+    }
+    
+    .navbar {
+    padding: 2%;
+}
 
+.navbar .home-nav {
+    font-size: 30px;
+}
 
+.navbar .logo {
+    left: 60%;
+}
+
+.navbar .logo img {
+    width: 22%;
+}
+
+.navbar .menu-icon {
+    font-size: 25px;
+    right: 2%;
+} 
+    
+/*    Intro section on index*/
+    
+    .Intro{
+        margin-top: 13%;
+        margin-bottom: 3%;
+        height: 920px;
+    }
+    
+    .Intro .Intro-image {
+        width: 60%; 
+        padding-bottom: 5%;
+    }
+    
+    .Intro .Intro-text {
+        padding: 7%;
+    }
+    
+    .Intro h1 {
+        font-size: 55px;
+    }
+    
+    .Intro h2 {
+        font-size: 55px;
+    }
+    
+    .Intro p {
+        font-size: 20px;
+    }
+    
+    .btn {
+        font-size: 15px;
+        padding: 1.5% 4%;
+        font-weight: 200;
+        border-radius: 8px;
+}
+    
+/*    print page */
+    .layer h3{
+        font-size: 43px;
+        padding-bottom: 5%;
+}
+
+    .layer p{
+        font-size: 18px;
+}
+    
+    .Printing-intro .text-content1 {
+        max-width: 900px;
+}
+
+    .Printing-intro h1 {
+        font-size: 45px;
+}
+
+    .Printing-intro p {
+        font-size: 18px;
+}
+    
+    .Printing-intro .btn {
+    padding: 13px 40px;
+    font-size: 15px;
+    border-radius: 7px;
+}
+    
+/*    Print slideshow*/
+    .bigtitle {
+  font-size: 45px;
+  padding-bottom: 7%;
+  padding-left: 15%;
+}
+
+.description{
+  font-size: 18px;
+  padding-bottom: 0%;
+  padding-left: 15%;
+}
+    
+/*    footer icon*/
+    ion-icon {
+    padding-top: 1%;
+    font-size: 30px;
+}
+    
+/*    contact page*/
+    .contact-title img{
+    padding: 4%;
+    width: 40%;
+    height: auto;
+}
+    
+/*    about page*/
+
+    .first-welcome {
+    padding-top: 12%;
+    padding-left: 12%;
+    padding-bottom: 8%;
+}
+    
+    .first-welcome img {
+    width: 30%;
+}
+
+.history {
+    padding-left: 13%;
+    width: 45%;
+}
+
+.history h1 {
+    font-size: 50px;
+}
+
+.history p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/*    work with me section in about */
+.work-with-me {
+    justify-content: space-evenly;
+}
+
+/*    design page*/
+    .title-design {
+    padding-top: 9%;
+    padding-bottom: 4%;
+    margin-bottom: 10%;
+}
+
+.title-design img {
+    width: 20%;
+}
+    
+/*    card design*/
+    
+    .design-card {
+    width: 570px;
+    height: 500px;
+}
+    
+}
