@@ -153,6 +153,11 @@
     position: relative;
 }
 
+.header video {
+    margin-bottom: 3%;
+    padding-top: 2%;
+}
+
 
 /* Intro Section */
 .Intro {
@@ -160,7 +165,7 @@
     align-items: center;
     justify-content: center;
     background-color:#062692; 
-    margin-top: 2%;
+    margin-top: 1%;
     width: 100%;
     height: 720px;
     padding: 0 10%;
